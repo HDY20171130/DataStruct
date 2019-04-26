@@ -1,0 +1,135 @@
+// main5-1.h 检验bo5-1.h
+//#include "c1.h"
+//typedef int ElemType;
+//#include "c5-1.h"
+//#include "bo5-1.h"
+//
+//int main()
+//{
+//    Array A;
+//    int i, j, k, dim = 3;
+//    int bound1 = 3, bound2 = 4, bound3 = 2;      // 维数
+//    ElemType e;
+//    InitArray(A, dim, bound1, bound2, bound3);   // 构造3×4×2的三维数组
+//    printf("A.bounds = ");
+//    for(i = 0; i < dim; i++)
+//        printf("%d", *(A.bounds + i));
+//    printf("\nA.constants = ");
+//    for(i = 0; i < dim; i++)
+//        printf("%d", *(A.constants + i));
+//    printf("\n%d页%d行%d列矩阵元素如下:\n",bound1,bound2,bound3);
+//    for(i = 0; i < bound1; i++)
+//    {
+//        for(j = 0; j < bound2; j++)
+//        {
+//            for(k = 0; k < bound3; k++)
+//            {
+//                Assign(A, i*100 + j*10 + k,i,j,k);
+//                Value(e,A,i,j,k);
+//                printf("A[%d][%d][%d] = %2d   ", i,j,k,e);
+//            }
+//            printf("\n");
+//        }
+//        printf("\n");
+//    }
+//    printf("A.base = \n");
+//    for(i = 0; i < bound1*bound2*bound3; i++)
+//    {
+//        printf("%4d", *(A.base+i));
+//        if(i%(bound2*bound3)==bound2*bound3-1)
+//            printf("\n");
+//    }
+//    printf("A.dim = %d\n",A.dim);
+//    DestroyArray(A);
+//
+//    return 0;
+//}
+
+
+// algo5-1.cpp  变长参数表(函数的实参个数可变)
+//#include "c1.h"
+//typedef int ElemType;
+//ElemType Max(int num,...)
+//{// 求num个数中最大值
+//    va_list ap;
+//    int i;
+//    ElemType m, n;
+//    if(num < 1)
+//        exit(OVERFLOW);
+//    va_start(ap, num);
+//        m = va_arg(ap, ElemType);
+//        for(i = 1; i < num; i++)
+//        {
+//            n = va_arg(ap, ElemType);
+//            if (m < n)
+//                m = n;
+//        }
+//    va_end(ap);
+//    return m;
+//}
+//int main()
+//{
+//    printf("最大值为%d\n",Max(4,7,9,5,8));
+//    printf("最大值为%d\n",Max(3,17,36,25));
+//    return 0;
+//}
+
+
+// main5-2.cpp 检验bo5-2.h和bo5-3.h的主程序
+//#include"c1.h"
+//typedef int ElemType;
+//#include"c5-2.h"
+//#include"func5-1.h"
+//#include"bo5-2.h"
+//#include"bo5-3.h"
+//#include"func5-2.h"
+
+// algo.cpp 实现算法5.2的程序
+#include "c1.h"
+typedef int ElemType;
+#include "c5-2.h"
+#include "func5-1.h"
+#include "bo5-2.h"
+#include "bo5-3.h"
+void FastTransposeSMatrix(TSMatrix M, TSMatrix &T)
+{// 快速求稀疏矩阵M的转置矩阵T
+    int p, q, col, *num, *cpot;
+    num = (int*)malloc((M.nu+1)*sizeof(int));    // 存M每列非零元个数
+    cpot = (int*)malloc((M.nu+1)*sizeof(int));   // 存T每行下一个非零元素的位置
+    T.mu = M.mu;
+    T.nu = M.nu;
+    T.tu = M.tu;
+    if(T.tu)
+    {
+        for(col = 1; col <= M.nu; col++)         // 从M的第一列到最后一列
+            num[col] = 0;                        // 计数器初值清零
+        for(p = 1; p <= M.tu; p++)               // M的非零元素
+            ++num[M.data[p].j];                  // 根据所在列进行统计
+        cpot[1] = 1;                             // T的第一行的第一个非零元在T.data中的序号为1
+        for(col = 2; col <= M.nu; col++)         // 从M的第二列到最后一列
+            cpot[col] = cpot[col - 1] + num[col - 1];
+        for(p = 1; p <= M.tu; p++)
+        {
+            col = M.data[p].j;                   // 将其在M中的列数赋给col
+            q = cpot[col];                       // q指示M当前的元素在T中的序号
+            T.data[q].i = M.data[p].j;
+            T.data[q].j = M.data[p].i;
+            T.data[q].e = M.data[p].e;
+            cpot[col]++;
+        }
+    }
+    free(num);
+    free(cpot);
+}
+
+int main()
+{
+    TSMatrix A, B;
+    printf("创建矩阵A: ");
+    CreateSMatrix(A);
+    PrintSMatrix(A);
+    FastTransposeSMatrix(A, B);
+    printf("矩阵B(A的快速转置:)\n");
+    PrintSMatrix(B);
+    return 0;
+}

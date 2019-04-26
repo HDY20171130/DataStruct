@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1554616535 source:d:\code\datastruct\secondchapter\main.cpp
+	"c1.h"
+	"c2-2.h"
+	"bo2-2.h"
+	"func2-2.h"
+
+1554553949 d:\code\datastruct\secondchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1554551178 d:\code\datastruct\secondchapter\c2-1.h
+
+1554559103 d:\code\datastruct\secondchapter\bo2-1.h
+
+1554558792 d:\code\datastruct\secondchapter\func2-2.h
+
+1554554688 d:\code\datastruct\secondchapter\c2-2.h
+
+1554557063 d:\code\datastruct\secondchapter\bo2-2.h
+
+1554558773 d:\code\datastruct\secondchapter\func2-1.h
+

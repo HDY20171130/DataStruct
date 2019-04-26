@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1554542776 source:d:\code\datastruct\firstchapter\main.cpp
+	"c1.h"
+
+1554542566 d:\code\datastruct\firstchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1554542335 d:\code\datastruct\firstchapter\c1-1.h
+
+1554542394 d:\code\datastruct\firstchapter\bo1-1.h
+
+1554542366 d:\code\datastruct\firstchapter\func1-1.h
+

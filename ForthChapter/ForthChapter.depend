@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1555296099 source:d:\code\datastruct\forthchapter\main.cpp
+	"c1.h"
+	"c4-2.h"
+	"bo4-2.h"
+	"func4-1.h"
+
+1440770766 d:\code\datastruct\forthchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1555055332 d:\code\datastruct\forthchapter\c4-1.h
+
+1555060426 d:\code\datastruct\forthchapter\bo4-1.h
+
+1555059866 d:\code\datastruct\forthchapter\func4-1.h
+
+1555060666 d:\code\datastruct\forthchapter\c4-2.h
+
+1555296158 d:\code\datastruct\forthchapter\bo4-2.h
+

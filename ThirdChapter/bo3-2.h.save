@@ -1,0 +1,75 @@
+// bo3-2.h链队列的基本操作(9个)
+void InitQueue(LinkQueue &Q)
+{
+    Q.front1 = Q.rear = (QueuePtr)malloc(sizeof(QNode));
+    if(!Q.front1)
+        exit(OVERFLOW);
+    Q.front1->next = NULL;
+}
+
+void DestroyQueue(LinkQueue &Q)
+{
+    while(Q.front1)
+    {
+        Q.rear = Q.front1->next;
+        free(Q.front1);
+        Q.front1 = Q.rear;
+    }
+}
+
+void ClearQueue(LinkQueue &Q)
+{
+    DestroyQueue(Q);
+    InitQueue(Q);
+}
+
+Status QueueEmpty(LinkQueue Q)
+{
+    if(Q.front1 == Q.rear)
+        return TRUE;
+    return FALSE;
+}
+
+int QueueLength(LinkQueue Q)
+{
+    int len = 0;
+    QueuePtr p = Q.front1;
+    while(Q.rear != p)
+    {
+        len++;
+        p = p->next;
+    }
+    return len;
+}
+
+Status GetHead(LinkQueue Q, QElemType &e)
+{
+    if(Q.front1 == Q.rear)
+        return ERROR;
+    QueuePtr p = Q.front1->next;
+    e = p->data;
+    return OK;
+}
+
+void EnQueue(LinkQueue &Q, QElemType e)
+{// 入队
+    QueuePtr p = (QueuePtr)malloc(sizeof(QNode));
+    if(!p)
+        exit(OVERFLOW);
+    p->data = e;
+    p->next = NULL;
+    Q.rear->next = p;
+    Q.rear = p;
+}
+
+Status DeQueue(LinkQueue &Q, QElemType &e)
+{
+    if(Q.front1 == Q.rear)
+        return ERROR;
+    QueueP
+}
+
+void QueueTraverse(LinkQueue Q, void(*visit)(QElemType))
+{
+
+}

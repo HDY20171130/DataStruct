@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1555051399 source:d:\code\datastruct\thirdchapter\main.cpp
+	"c1.h"
+	"c3-1.h"
+	"bo3-1.h"
+	"func3-1.h"
+
+1440770766 d:\code\datastruct\thirdchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1554864817 d:\code\datastruct\thirdchapter\c3-3.h
+
+1554865659 d:\code\datastruct\thirdchapter\bo3-4.h
+
+1440770766 d:\code\datastruct\thirdchapter\func2-2.h
+
+1554860174 d:\code\datastruct\thirdchapter\c3-1.h
+
+1554861376 d:\code\datastruct\thirdchapter\bo3-1.h
+
+1555051944 d:\code\datastruct\thirdchapter\func3-1.h
+

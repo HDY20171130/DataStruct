@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1555853622 source:d:\code\datastruct\fifthchapter\main.cpp
+	"c1.h"
+	"c5-2.h"
+	"func5-1.h"
+	"bo5-2.h"
+	"bo5-3.h"
+
+1440770766 d:\code\datastruct\fifthchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1555400907 d:\code\datastruct\fifthchapter\c5-2.h
+
+1555402914 d:\code\datastruct\fifthchapter\func5-1.h
+
+1555406117 d:\code\datastruct\fifthchapter\bo5-2.h
+
+1555406026 d:\code\datastruct\fifthchapter\bo5-3.h
+
+1555405856 d:\code\datastruct\fifthchapter\func5-2.h
+
