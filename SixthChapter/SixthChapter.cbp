@@ -32,6 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="bo3-1.h" />
+		<Unit filename="bo3-2.h" />
+		<Unit filename="bo6-1.h" />
+		<Unit filename="bo6-2.h" />
+		<Unit filename="c1.h" />
+		<Unit filename="c3-1.h" />
+		<Unit filename="c3-2.h" />
+		<Unit filename="c6-1.h" />
+		<Unit filename="func6-1.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
