@@ -285,4 +285,77 @@ void InOrderTraverse2(BiTree T, void(*Visit)(TElemType))
     DestroyStack(S);
 }
 
+void PreOrderTraverse1(BiTree T, void(*Visit)(TElemType))
+{// 非递归先序遍历算法(利用栈)
+    SqStack S;
+    InitStack(S);
+    BiTree p = T;
+    while(p || !StackEmpty(S))
+    {
+        while(p)
+        {
+            Visit(p->data);
+            Push(S,p);
+            p = p->lchild;
+        }
+        if(!StackEmpty(S))
+        {
+            Pop(S,p);
+            p = p->rchild;
+        }
+    }
+    printf("\n");
+    DestroyStack(S);
+}
+
+void InOrderTraverse3(BiTree T, void(*Visit)(TElemType))
+{// 非递归中序遍历算法(利用栈)
+    SqStack S;
+    InitStack(S);
+    BiTree p = T;
+    while(p || !StackEmpty(S))
+    {
+        while(p)
+        {
+            Push(S,p);
+            p = p->lchild;
+        }
+        // 遍历到左下角尽头再出栈访问
+        Pop(S,p);
+        Visit(p->data);
+        p = p->rchild;
+    }
+    printf("\n");
+    DestroyStack(S);
+}
+
+void PostOrderTraverse1(BiTree T, void(*Visit)(TElemType))
+{// 非递归后续遍历算法(利用栈)
+    SqStack S;
+    InitStack(S);
+    BiTree p = T, r = NULL;  // r为辅助指针
+    while(p || !StackEmpty(S))
+    {
+        if(p)
+        {
+            Push(S, p);
+            p = p->lchild;
+        }
+        else
+        {
+            GetTop(S, p);  // 取栈顶,不是出栈,不是出栈,不是出栈
+            // 右子树不空,且右子树未访问
+            if(p->rchild && p->rchild != r)
+                p = p->rchild;
+            // 右子树为空,或者右子树访问完,出栈访问结点
+            else
+            {
+                Pop(S,p);
+                Visit(p->data);
+                r = p;        // 指向访问过的右子树的根节点
+                p == NULL;    // p置空,为了继续访问栈顶
+            }
+        }
+    }
+}
 

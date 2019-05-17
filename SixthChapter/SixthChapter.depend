@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1556886604 source:d:\code\datastruct\sixthchapter\main.cpp
-	"func6-1.h"
-	"c6-1.h"
-	"bo6-1.h"
-	"bo6-2.h"
+1557977346 source:d:\code\datastruct\sixthchapter\main.cpp
+	"c1.h"
+	"c6-3.h"
+	"func6-2.h"
+	"func6-3.h"
+	"func6-4.h"
 
 1556450986 d:\code\datastruct\sixthchapter\func6-1.h
 	"c1.h"
@@ -37,4 +38,20 @@
 1554860174 d:\code\datastruct\sixthchapter\c3-1.h
 
 1554861376 d:\code\datastruct\sixthchapter\bo3-1.h
+
+1557240087 d:\code\datastruct\sixthchapter\c6-2.h
+
+1557762326 d:\code\datastruct\sixthchapter\bo6-3.h
+	"c3-2.h"
+	"bo3-2.h"
+
+1557760776 d:\code\datastruct\sixthchapter\bo6-4.h
+
+1557974859 d:\code\datastruct\sixthchapter\c6-3.h
+
+1557976115 d:\code\datastruct\sixthchapter\func6-2.h
+
+1557977460 d:\code\datastruct\sixthchapter\func6-3.h
+
+1557976866 d:\code\datastruct\sixthchapter\func6-4.h
 
