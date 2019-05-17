@@ -1,21 +1,21 @@
 #ifndef C7-1_H_INCLUDED
 #define C7-1_H_INCLUDED
 
-#define INFINITY INT_MAX           // ÓÃÕûĞÍ×î´óÖµ´úÌæÎŞÇî´ó
-typedef int VRType;                //
-#define MAX_VERTEX_NUM 26          //
-enum GrapgKind{DG, DN, UDG, UDN};  // {ÓĞÏòÍ¼,ÓĞÏòÍø,ÎŞÏòÍ¼,ÎŞÏòÍø}
-typedef struct                     // »¡ĞÅÏ¢
+#define INFINITY INT_MAX           // ç”¨æ•´å‹æœ€å¤§å€¼ä»£æ›¿æ— ç©·å¤§
+typedef int VRType;                // å®šä¹‰é¡¶ç‚¹å…³ç³»ç±»å‹ä¸ºæ•´å‹,ä¸INFINITYç±»å‹ä¸€è‡´
+#define MAX_VERTEX_NUM 26          // æœ€å¤§é¡¶ç‚¹ä¸ªæ•°
+enum GrapgKind{DG, DN, UDG, UDN};  // {æœ‰å‘å›¾,æœ‰å‘ç½‘,æ— å‘å›¾,æ— å‘ç½‘}
+typedef struct                     // å¼§ä¿¡æ¯
 {
-    VRType adj;                    // ¶¥µã¹ØÏµÀàĞÍ
-    InfoType *info;                // ¸Ã»¡Ïà¹ØĞÅÏ¢µÄÖ¸Õë(¿ÉÎŞ)
-}ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];     //¶şÎ¬Êı×é
-struct MGraph                          // Í¼µÄ½á¹¹
+    VRType adj;                    // é¡¶ç‚¹å…³ç³»ç±»å‹
+    InfoType *info;                // è¯¥å¼§ç›¸å…³ä¿¡æ¯çš„æŒ‡é’ˆ(å¯æ— )
+}ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];     //äºŒç»´æ•°ç»„
+struct MGraph                          // å›¾çš„ç»“æ„
 {
-    VertexType vexs[MAX_VERTEX_NUM];   // ¶¥µãÏòÁ¿
-    AdjMatrix arcs;                    // ÁÚ½Ó¾ØÕó
-    int vexnum, arcnum;                // ¶¥µãÊı,»¡Êı
-    GrapgKind kind;                    // Í¼µÄÖÖÀà±êÖ¾(Ã¶¾ÙÀàĞÍ)
+    VertexType vexs[MAX_VERTEX_NUM];   // é¡¶ç‚¹å‘é‡
+    AdjMatrix arcs;                    // é‚»æ¥çŸ©é˜µ
+    int vexnum, arcnum;                // é¡¶ç‚¹æ•°,å¼§æ•°
+    GrapgKind kind;                    // å›¾çš„ç§ç±»æ ‡å¿—(æšä¸¾ç±»å‹)
 };
 
 #endif // C7-1_H_INCLUDED
