@@ -35,6 +35,9 @@
 		<Unit filename="c7-1.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="func7-1.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

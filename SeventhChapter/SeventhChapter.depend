@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1558339983 source:d:\code\datastruct\seventhchapter\main.cpp
+	"c1.h"
+	"func7-2.h"
+	"func7-1.h"
+	"c7-1.h"
+	"bo7-1.h"
+	"func7-3.h"
+
+1558340223 d:\code\datastruct\seventhchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1558190622 d:\code\datastruct\seventhchapter\func7-2.h
+
+1558340666 d:\code\datastruct\seventhchapter\func7-1.h
+
+1558340050 d:\code\datastruct\seventhchapter\c7-1.h
+
+1558340287 d:\code\datastruct\seventhchapter\bo7-1.h
+
+1558339499 d:\code\datastruct\seventhchapter\func7-3.h
+
