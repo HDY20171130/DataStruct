@@ -1,16 +1,34 @@
-#define INFINITY INT_MAX           // ÓÃÕûĞÍ×î´óÖµ´úÌæÎŞÇî´ó
+#define INFINITY INT_MAX           // ç”¨æ•´å‹æœ€å¤§å€¼ä»£æ›¿æ— ç©·å¤§
 typedef int VRType;                //
 #define MAX_VERTEX_NUM 26          //
-enum GrapgKind{DG, DN, UDG, UDN};  // {ÓĞÏòÍ¼,ÓĞÏòÍø,ÎŞÏòÍ¼,ÎŞÏòÍø}
-typedef struct                     // »¡ĞÅÏ¢
+enum GrapgKind{DG, DN, UDG, UDN};  // {æœ‰å‘å›¾,æœ‰å‘ç½‘,æ— å‘å›¾,æ— å‘ç½‘}
+typedef struct                     // å¼§ä¿¡æ¯
 {
-    VRType adj;                    // ¶¥µã¹ØÏµÀàĞÍ,¶ÔÓÚÎŞÈ¨Í¼,1:ÏàÁÚ,0:²»ÏàÁÚ;¶ÔÓÚÓĞÈ¨Í¼,ÔòÎªÈ¨Öµ
-    InfoType * info;                // ¸Ã»¡Ïà¹ØĞÅÏ¢µÄÖ¸Õë(¿ÉÎŞ)
-}ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];     //¶şÎ¬Êı×é
+    VRType adj;                    // é¡¶ç‚¹å…³ç³»ç±»å‹,å¯¹äºæ— æƒå›¾,1:ç›¸é‚»,0:ä¸ç›¸é‚»;å¯¹äºæœ‰æƒå›¾,åˆ™ä¸ºæƒå€¼
+    InfoType * info;                // è¯¥å¼§ç›¸å…³ä¿¡æ¯çš„æŒ‡é’ˆ(å¯æ— )
+}ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];     //äºŒç»´æ•°ç»„
 struct MGraph
-{// Í¼µÄ½á¹¹
-    VertexType vexs[MAX_VERTEX_NUM];   // ¶¥µãÏòÁ¿
-    AdjMatrix arcs;                    // ÁÚ½Ó¾ØÕó
-    int vexnum, arcnum;                // ¶¥µãÊı,»¡Êı
-    GrapgKind kind;                    // Í¼µÄÖÖÀà±êÖ¾(Ã¶¾ÙÀàĞÍ)
+{// å›¾çš„ç»“æ„
+    VertexType vexs[MAX_VERTEX_NUM];   // é¡¶ç‚¹å‘é‡
+    AdjMatrix arcs;                    // é‚»æ¥çŸ©é˜µ
+    int vexnum, arcnum;                // é¡¶ç‚¹æ•°,å¼§æ•°
+    GrapgKind kind;                    // å›¾çš„ç§ç±»æ ‡å¿—(æšä¸¾ç±»å‹)
+#ifndef C7-1_H_INCLUDED
+#define C7-1_H_INCLUDED
+
+#define INFINITY INT_MAX           // é¢ã„¦æš£é¨å¬«æ¸¶æ¾¶Ñƒâ‚¬é—´å”¬é‡æŒæ£¤ç»Œå³°ã‡
+typedef int VRType;                // ç€¹æ°«ç®Ÿæ¤¤å‰å£éå´‡éƒ´ç»«è¯²ç€·æ¶“çƒ˜æš£é¨?æ¶“å¶ªNFINITYç»«è¯²ç€·æ¶“â‚¬é‘·?
+#define MAX_VERTEX_NUM 26          // éˆâ‚¬æ¾¶Ñ‡ã€Šéé€›é‡œé?
+enum GrapgKind{DG, DN, UDG, UDN};  // {éˆå¤Šæ‚œé¥?éˆå¤Šæ‚œç¼ƒ?éƒçŠ²æ‚œé¥?éƒçŠ²æ‚œç¼ƒæ†“
+typedef struct                     // å¯®Ñ‚ä¿Šé­?
+{
+    VRType adj;                    // æ¤¤å‰å£éå´‡éƒ´ç»«è¯²ç€·
+    InfoType *info;                // ç’‡ãƒ¥å§¬é©ç¨¿å§æ·‡â„ƒä¼…é¨å‹¬å¯šé–½?é™îˆ›æ£¤)
+}ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];     //æµœå²€æ·®éæ‰®ç²
+struct MGraph                          // é¥å‰§æ®‘ç¼æ’´ç€¯
+{
+    VertexType vexs[MAX_VERTEX_NUM];   // æ¤¤å‰å£éšæˆ¦å™º
+    AdjMatrix arcs;                    // é–­ç»˜å¸´é­â•…æ¨€
+    int vexnum, arcnum;                // æ¤¤å‰å£é?å¯®Ñ„æšŸ
+    GrapgKind kind;                    // é¥å‰§æ®‘ç»‰å¶‡è¢«éå›§ç¹”(é‹æ°«å¦‡ç»«è¯²ç€·)
 };
