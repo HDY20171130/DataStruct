@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1558592743 source:d:\code\datastruct\eighthchapter\main.cpp
+	"c1.h"
+	"func8-5.h"
+	"c8-2.h"
+	"c6-1.h"
+	"func8-4.h"
+	"bo8-2.h"
+
+1558400390 d:\code\datastruct\eighthchapter\c1.h
+	<string.h>
+	<ctype.h>
+	<malloc.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<math.h>
+	<sys/timeb.h>
+	<stdarg.h>
+
+1558402207 d:\code\datastruct\eighthchapter\func8-1.h
+
+1558343057 d:\code\datastruct\eighthchapter\c8-1.h
+
+1558400365 d:\code\datastruct\eighthchapter\c8-2.h
+
+1558409682 d:\code\datastruct\eighthchapter\bo8-1.h
+
+1558403229 d:\code\datastruct\eighthchapter\func8-2.h
+
+1558421929 d:\code\datastruct\eighthchapter\func8-3.h
+
+1556261668 d:\code\datastruct\eighthchapter\c6-1.h
+
+1556887899 d:\code\datastruct\eighthchapter\bo6-1.h
+
+1558533667 d:\code\datastruct\eighthchapter\func8-5.h
+
+1558490941 d:\code\datastruct\eighthchapter\func8-4.h
+	"bo6-1.h"
+
+1558533379 d:\code\datastruct\eighthchapter\bo8-2.h
+

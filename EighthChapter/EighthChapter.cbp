@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="SeventhChapter" />
+		<Option title="EighthChapter" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/SeventhChapter" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/EighthChapter" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/SeventhChapter" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/EighthChapter" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,16 +32,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="bo7-1.h" />
+		<Unit filename="bo6-1.h" />
+		<Unit filename="bo8-1.h" />
+		<Unit filename="bo8-2.h" />
+		<Unit filename="bo8-3.h" />
 		<Unit filename="c1.h" />
-		<Unit filename="c7-1.h">
+		<Unit filename="c6-1.h" />
+		<Unit filename="c8-1.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="func7-1.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="func7-2.h" />
-		<Unit filename="func7-3.h" />
+		<Unit filename="c8-2.h" />
+		<Unit filename="c8-3.h" />
+		<Unit filename="func8-1.h" />
+		<Unit filename="func8-2.h" />
+		<Unit filename="func8-3.h" />
+		<Unit filename="func8-4.h" />
+		<Unit filename="func8-5.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
